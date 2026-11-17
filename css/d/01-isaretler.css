@@ -1,0 +1,73 @@
+/* 1. Nokta ve çizgi */
+.birim-liste { list-style: none; padding-left: 0 !important; }
+.birim-liste li { display: flex; gap: 0.6em; align-items: baseline; }
+.birim-liste .kod { min-width: 1.2em; color: var(--pirinc); font-size: 1.1em; }
+.zb-sheet, .hiz-sheet { padding: 6px 0; }
+.birim-sayac .olcum b { font-size: 1.5rem; }
+
+/* alfabe */
+.alf-secili { display: flex; align-items: center; gap: 22px; padding: 6px 2px 4px; min-height: 92px; }
+.alf-harf { font-family: var(--f-display); font-weight: 800; font-size: 5rem; line-height: 0.85; color: var(--ink); min-width: 1ch; }
+.alf-bilgi { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+.alf-kod { font-size: 1.5rem; color: var(--ink); }
+.alf-svg .kod-svg { height: 12px; }
+.alf-bilgi small { color: var(--muted); font-weight: 600; }
+.alf-kaydir { flex: 1; min-height: 0; padding: 2px; }
+.ustcizgi { text-decoration: overline; text-decoration-thickness: 2px; }
+.alf-izgara .harf-hucre .kod-svg { height: 6px; }
+
+/* ağaç */
+.agac-kap { padding: 10px 8px; }
+.agac-svg { width: 100%; height: auto; display: block; max-height: 52vh; }
+.agac-k { stroke: var(--line-2); stroke-width: 2; }
+.agac-k.dah { stroke-dasharray: 9 4; }
+.agac-k.yol { stroke: var(--pirinc); stroke-width: 4; }
+.agac-d circle { fill: var(--kagit-2); stroke: var(--line-2); stroke-width: 1.5; }
+.agac-d text { font-family: var(--f-display); font-weight: 800; font-size: 20px; fill: var(--ink); pointer-events: none; }
+.agac-d[role="button"] { cursor: pointer; }
+.agac-d[role="button"]:hover circle, .agac-d:focus-visible circle { stroke: var(--pirinc); stroke-width: 3; }
+.agac-d:focus { outline: none; }
+.agac-d.kok circle { fill: var(--ink); stroke: none; }
+.agac-d.tr text { fill: var(--muted); }
+.agac-d.tr circle { stroke-dasharray: 3 3; }
+.agac-d.bos circle { fill: transparent; stroke-dasharray: 2 4; }
+.agac-d.yol circle { fill: color-mix(in srgb, var(--pirinc-2) 35%, var(--kagit)); stroke: var(--pirinc); stroke-width: 2.5; }
+.agac-d.son circle { fill: var(--pirinc); }
+.agac-d.son text { fill: #2a1d02; }
+.agac-bilgi { display: flex; align-items: center; gap: 18px; min-height: 3rem; }
+.agac-kod { font-size: 1.6rem; color: var(--ink); }
+.agac-harf { font-family: var(--f-display); font-weight: 800; font-size: 3rem; line-height: 1; color: var(--pirinc); }
+.agac-soru { color: var(--muted); font-weight: 600; }
+
+/* sıklık */
+.siklik-grafik { height: clamp(170px, 30vh, 260px); position: relative; flex: none; }
+.siklik-grafik canvas { position: absolute; inset: 0; width: 100%; height: 100%; }
+.siklik-tr { padding: 12px 14px; display: flex; flex-direction: column; gap: 10px; min-height: 0; overflow: auto; }
+.siklik-metin {
+  width: 100%; resize: vertical; font: inherit; font-size: .9rem; line-height: 1.5; color: var(--ink);
+  background: var(--bg); border: 0; border-bottom: 2px solid var(--ink-2); padding: 8px 10px; border-radius: 2px;
+}
+.siklik-metin:focus { outline: none; border-bottom-color: var(--pirinc); }
+.siklik-tablo table { width: 100%; }
+.siklik-tablo td small { color: var(--muted); margin-left: 4px; }
+.siklik-tablo .kod-svg { height: 5px; }
+.siklik-tr .olcum b { font-size: 1.4rem; }
+
+/* hız */
+.hiz-kiyas { display: flex; flex-direction: column; gap: 6px; font-size: .86rem; }
+.hiz-satir { display: grid; grid-template-columns: 5.2em 1fr 4.2em; gap: 10px; align-items: center; color: var(--ink-2); }
+.hiz-cubuk { height: 10px; background: var(--kagit); border-radius: 5px; box-shadow: inset 0 0 0 1px var(--line); overflow: hidden; }
+.hiz-cubuk i { display: block; height: 100%; background: var(--line-2); border-radius: 5px; }
+.hiz-satir.on { color: var(--ink); font-weight: 700; }
+.hiz-satir.on .hiz-cubuk i { background: var(--pirinc); }
+.hiz-sn { text-align: right; font-variant-numeric: tabular-nums; }
+
+@media (max-width: 860px) {
+  .alf-harf { font-size: 3.6rem; }
+  .agac-d text { font-size: 24px; }
+  .agac-svg { max-height: none; }
+}
+@media (max-width: 860px) {
+  .agac-kap { overflow-x: auto; }
+  .agac-svg { min-width: 680px; }
+}

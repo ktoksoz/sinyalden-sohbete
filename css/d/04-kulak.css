@@ -1,0 +1,74 @@
+/* 4. Kulakla öğrenmek */
+.hucre-alt { font-size: .68rem; color: var(--muted); font-weight: 600; line-height: 1.2; }
+.harf-hucre .kh { line-height: 0; max-width: 100%; display: block; }
+.harf-hucre .kh .kod-svg { max-width: 100%; height: auto; }
+
+/* ses kalıbı */
+.sk-ust { display: flex; align-items: center; gap: 22px; flex-wrap: wrap; }
+.sk-harf { font-family: var(--f-display); font-weight: 900; font-size: clamp(4rem, 8vw, 7rem); line-height: .85; color: var(--ink); min-width: 1ch; }
+.sk-hece { font-size: clamp(1.1rem, 1.8vw, 1.6rem); color: var(--pirinc); margin-bottom: 10px; }
+.sk-kap { position: relative; height: 170px; flex: none; }
+.sk-kap > canvas { position: absolute; inset: 0; width: 100%; height: 100%; }
+
+/* koch */
+.koch-ders { font-family: var(--f-display); font-size: 1.25rem; font-weight: 800; min-width: 2.2em; text-align: center; }
+.koch-izgara { grid-template-columns: repeat(auto-fill, minmax(74px, 1fr)); }
+.koch-izgara .harf-hucre b { font-size: 1.4rem; }
+
+/* farnsworth */
+.fw-blok { display: flex; flex-direction: column; gap: 4px; }
+.fw-lab { margin: 0; font-size: .88rem; color: var(--ink-2); }
+.fw-tablo { overflow-x: auto; }
+
+/* koch alıştırması */
+.ka-harfler { display: inline-flex; flex-wrap: wrap; gap: 4px; }
+.ka-chip { font-family: var(--f-mono); font-weight: 700; font-size: .8rem; padding: 1px 7px; border-radius: 3px; background: var(--kagit); box-shadow: inset 0 0 0 1px var(--line); }
+.ka-chip.yeni { background: var(--pirinc); color: #2a1d02; box-shadow: none; }
+.ka-hiz { font-family: var(--f-mono); font-size: .8rem; font-weight: 600; color: var(--ink-2); }
+.ka-durum { margin: 0; font-size: .88rem; color: var(--muted); min-height: 1.4em; }
+.ka-kutu { font-size: 1.05rem; }
+.ka-sonuc { display: flex; flex-direction: column; gap: 10px; }
+.ka-sonuc:empty { display: none; }
+.ka-gruplar { display: flex; flex-wrap: wrap; gap: 8px 18px; }
+.olcum.iyi b { color: var(--dogru); }
+.fark { display: inline-flex; flex-direction: column; font-family: var(--f-mono); font-weight: 700; font-size: .95rem; letter-spacing: .06em; line-height: 1.35; }
+.fark-alt { font-size: .8em; opacity: .85; }
+.fk.ok { color: var(--dogru); }
+.fk.hata { color: var(--yanlis); }
+.fk.bos { color: var(--muted); opacity: .6; }
+.ka-gecmis-ust, .th-tablo-ust { display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap; }
+.ka-cubuklar { display: flex; align-items: flex-end; gap: 4px; height: 76px; padding-top: 4px; position: relative;
+  background: linear-gradient(to top, transparent calc(90% - 1px), var(--pirinc) calc(90% - 1px) 90%, transparent 90%) 0 0 / 100% 60px no-repeat; }
+.ka-cubuk { flex: 1 1 0; max-width: 26px; height: 100%; display: flex; flex-direction: column; justify-content: flex-end; align-items: center; gap: 2px; }
+.ka-cubuk i { display: block; width: 100%; height: calc(var(--y) * 0.6); background: var(--line-2); border-radius: 2px 2px 0 0; }
+.ka-cubuk.iyi i { background: var(--dogru); }
+.ka-cubuk small { font-size: .62rem; color: var(--muted); font-family: var(--f-mono); height: 14px; }
+.ka-bos { font-size: .85rem; color: var(--muted); margin: 0; }
+
+/* tek harf */
+.th-kutu { flex: 0 0 4.5em; text-align: center; font-size: 1.6rem; }
+.th-geri { font-size: .95rem; min-height: 1.6em; display: flex; align-items: center; gap: 4px; flex-wrap: wrap; }
+.th-ok { color: var(--dogru); font-weight: 700; font-family: var(--f-mono); }
+.th-hata { color: var(--yanlis); font-weight: 700; }
+.th-izgara { grid-template-columns: repeat(auto-fill, minmax(72px, 1fr)); }
+.th-izgara .harf-hucre b { font-size: 1.3rem; }
+.harf-hucre.th-iyi { background: color-mix(in srgb, var(--dogru) 16%, var(--kagit)); }
+.harf-hucre.th-orta { background: color-mix(in srgb, var(--pirinc-2) 16%, var(--kagit)); }
+.harf-hucre.th-zayif { background: color-mix(in srgb, var(--yanlis) 16%, var(--kagit)); }
+
+/* türkçe harfler */
+.tr-scroll { display: flex; flex-direction: column; gap: 8px; }
+.tr-baslik { margin: 4px 0 6px; font-size: 1.05rem; }
+.tr-izgara { grid-template-columns: repeat(auto-fill, minmax(82px, 1fr)); }
+.tr-skor { font-weight: 700; color: var(--ink-2); font-size: .9rem; }
+.harf-hucre.tr-dogru { box-shadow: inset 0 0 0 3px var(--dogru); background: color-mix(in srgb, var(--dogru) 18%, var(--kagit)); }
+.harf-hucre.tr-yanlis { box-shadow: inset 0 0 0 3px var(--yanlis); }
+
+/* kelimeler */
+.kl-geri { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; min-height: 2.6em; }
+.kl-not { font-size: .9rem; color: var(--ink-2); }
+.kl-sira { font-family: var(--f-mono); font-size: .8rem; color: var(--muted); }
+.kl-liste { display: flex; flex-direction: column; gap: 2px; font-size: .86rem; }
+.kl-satir { padding: 3px 0; border-bottom: 1px solid var(--line); color: var(--yanlis); }
+.kl-satir.ok { color: var(--dogru); }
+.kl-satir span { color: var(--muted); }

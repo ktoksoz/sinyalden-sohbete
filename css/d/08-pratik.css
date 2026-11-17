@@ -1,0 +1,22 @@
+/* 8. Pratik */
+.pr-sheet { padding: 14px 16px 16px; display: flex; flex-direction: column; gap: 12px; }
+.pr-adimlar { list-style: none; counter-reset: adim; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 4px; }
+.pr-adimlar li { counter-increment: adim; display: flex; align-items: center; gap: 12px; padding: 8px 10px; background: var(--kagit); border-radius: 3px; box-shadow: inset 0 0 0 1px var(--line); }
+.pr-adimlar li::before { content: counter(adim); font-family: var(--f-display); font-weight: 800; font-size: 1.3rem; color: var(--muted); min-width: 1em; }
+.pr-adimlar li.aktif { box-shadow: inset 0 0 0 2px var(--pirinc); }
+.pr-adimlar li.aktif::before { color: var(--pirinc); }
+.pr-adimlar li.bitti { opacity: .55; }
+.pr-adimlar li.bitti::before { content: "✓"; color: var(--dogru); }
+.pr-ad { flex: 1; font-weight: 600; }
+.pr-sure { font-family: var(--f-mono); font-size: 0.86rem; color: var(--ink-2); font-variant-numeric: tabular-nums; }
+h3.pr-bas { margin: 6px 0 0; }
+.pr-ozet .olcum small { max-width: 16em; }
+
+/* kapanış: telgraf formu */
+.telgraf { background: var(--kagit); border-radius: 3px; padding: 14px 18px 18px; box-shadow: inset 0 0 0 1px var(--line); }
+.telgraf-bas { display: flex; justify-content: space-between; align-items: baseline; border-bottom: 2px solid var(--ink); padding-bottom: 6px; margin-bottom: 10px; }
+.telgraf-bas b { font-family: var(--f-display); font-weight: 900; font-size: 1.6rem; letter-spacing: 0.06em; }
+.telgraf-bas span { font-family: var(--f-mono); font-size: 0.8rem; color: var(--muted); }
+.telgraf-govde { font-family: var(--f-mono); font-weight: 600; font-size: clamp(1rem, 1.6vw, 1.4rem); letter-spacing: 0.08em; min-height: 3em; color: var(--ink); word-break: break-word;
+  background-image: repeating-linear-gradient(transparent 0 calc(1.9em - 1px), var(--line) calc(1.9em - 1px) 1.9em); line-height: 1.9em; }
+.telgraf-bos { font-family: var(--f-body); font-weight: 500; letter-spacing: 0; font-size: 0.95rem; color: var(--muted); }

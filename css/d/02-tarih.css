@@ -1,0 +1,56 @@
+/* 2. Telgrafın tarihi */
+.yaris-sheet { padding: 14px 16px; }
+.yaris { display: flex; flex-direction: column; gap: 14px; }
+.yaris-satir { display: grid; grid-template-columns: minmax(9em, 13em) 1fr 4.6em 3.4em; gap: 12px; align-items: center; }
+.yaris-ad { display: flex; flex-direction: column; line-height: 1.2; }
+.yaris-ad b { font-family: var(--f-display); font-weight: 760; font-size: 1.25rem; }
+.yaris-ad small { color: var(--muted); font-size: .76rem; font-weight: 600; }
+.yaris-cubuk { height: 14px; border-radius: 7px; background: var(--bg); box-shadow: inset 0 0 0 1px var(--line);
+  background-image: repeating-linear-gradient(90deg, transparent 0 calc(100% / 5 - 1px), var(--line-2) calc(100% / 5 - 1px) calc(100% / 5)); overflow: hidden; }
+.yaris-cubuk i { display: block; height: 100%; background: var(--line-2); border-radius: 7px; }
+.yaris-satir.vardi .yaris-cubuk i, .yaris-satir:last-child .yaris-cubuk i { background: var(--pirinc); }
+.yaris-sure { text-align: right; font-variant-numeric: tabular-nums; font-weight: 700; font-size: .9rem; }
+.yaris-durum { color: var(--dogru); font-weight: 700; font-size: .82rem; }
+.yaris-saat { min-width: 8em; }
+.yaris-saat b { font-size: 1.4rem; }
+.yaris-not { margin: 0; }
+
+.serit-baslik { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: 4px; }
+.serit-baslik b { font-family: var(--f-display); font-weight: 760; font-size: 1.15rem; }
+.serit-baslik small { display: block; color: var(--muted); font-size: .78rem; font-weight: 600; }
+.serit-baslik .btn { flex: none; }
+.iki-serit { padding: 2px 0; }
+.iki-serit .serit { height: 84px; }
+
+.ul-secili { display: flex; align-items: center; gap: 20px; min-height: 76px; }
+.ul-harf { font-family: var(--f-display); font-weight: 800; font-size: 4.2rem; line-height: .85; }
+.ul-satirlar { display: grid; gap: 4px; }
+.ul-satirlar div { display: flex; gap: 12px; align-items: baseline; }
+.ul-satirlar small { min-width: 7.5em; color: var(--muted); font-weight: 600; font-size: .8rem; }
+.ul-satirlar .kod { font-size: 1.2rem; white-space: pre; }
+.ul-kaydir { flex: 1; min-height: 0; padding: 2px; }
+.ul-izgara { grid-template-columns: repeat(auto-fill, minmax(78px, 1fr)); }
+.ul-hucre { gap: 5px; }
+.ul-hucre .kod-svg { height: 4px; max-width: 100%; }
+.ul-hucre .ul-am { color: var(--muted); }
+.ul-hucre .ul-am .kod-svg { color: var(--muted); }
+.ul-hucre.degisti { background: color-mix(in srgb, var(--pirinc-2) 16%, var(--kagit)); }
+.ul-hucre.degisti b { color: var(--pirinc); }
+
+.telgrafname { padding: 14px 16px 12px; display: flex; flex-direction: column; gap: 10px;
+  background-image: linear-gradient(var(--line) 1px, transparent 1px); background-size: 100% 2.1em; background-position: 0 3.2em; }
+.tn-ust { display: flex; justify-content: space-between; align-items: baseline; border-bottom: 2px solid var(--ink); padding-bottom: 4px; }
+.tn-ust b { font-family: var(--f-display); font-weight: 800; font-size: 1.5rem; letter-spacing: .12em; }
+.tn-ust small { color: var(--muted); font-weight: 600; font-size: .78rem; }
+.telgraf-metin {
+  width: 100%; resize: vertical; font-family: var(--f-mono); font-weight: 600; font-size: .92rem; line-height: 1.6; letter-spacing: .02em;
+  text-transform: uppercase; color: var(--ink); background: transparent; border: 0; border-bottom: 2px solid var(--ink-2); padding: 6px 2px;
+}
+.telgraf-metin:focus { outline: none; border-bottom-color: var(--pirinc); }
+.telgrafname .olcum b { font-size: 1.45rem; }
+
+@media (max-width: 860px) {
+  .yaris-satir { grid-template-columns: 1fr 4.4em; }
+  .yaris-ad { grid-column: 1 / -1; }
+  .yaris-durum { display: none; }
+}

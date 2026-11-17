@@ -1,0 +1,57 @@
+/* 6. Telsizde mors */
+.tel-sheet { padding: 14px 16px 16px; display: flex; flex-direction: column; gap: 12px; min-height: 0; }
+.bant-liste { display: flex; flex-wrap: wrap; gap: 6px; }
+.bant-btn {
+  font-family: var(--f-display); font-weight: 800; font-size: 1.1rem; padding: 4px 12px; border-radius: 3px; cursor: pointer;
+  border: 0; background: var(--kagit); color: var(--ink); box-shadow: inset 0 0 0 1px var(--line-2);
+}
+.bant-btn:hover { box-shadow: inset 0 0 0 2px var(--pirinc); }
+.bant-btn.on { background: var(--ink); color: var(--bg); box-shadow: none; }
+.kadran { position: relative; height: 110px; flex: none; }
+.kadran canvas { position: absolute; inset: 0; width: 100%; height: 100%; }
+
+/* Q kodları */
+.qk-izgara { display: grid; grid-template-columns: repeat(auto-fill, minmax(118px, 1fr)); gap: 6px; max-height: 46vh; overflow: auto; }
+.harf-hucre.qk { gap: 4px; }
+.harf-hucre.qk b { font-size: 1.4rem; }
+.harf-hucre.qk small { font-size: 0.78rem; color: var(--ink-2); line-height: 1.25; }
+.harf-hucre.qk .kod-svg { height: 5px; margin-right: 4px; }
+.qk-detay { min-height: 3.6em; font-size: 0.95rem; }
+.qk-detay p { margin: 0 0 4px; }
+.qk-detay .kod { color: var(--pirinc); }
+
+/* RST */
+.rst-kurulum { display: flex; flex-direction: column; gap: 4px; }
+.rst-rapor { display: flex; gap: 26px; }
+.rst-rapor span { display: flex; flex-direction: column; }
+.rst-rapor b { font-family: var(--f-display); font-weight: 800; font-size: clamp(2.6rem, 4vw, 3.6rem); line-height: 0.95; color: var(--ink); }
+.rst-rapor small { font-size: 0.78rem; color: var(--muted); font-weight: 600; }
+.rst-sinav:empty { display: none; }
+.rst-sinav { display: flex; flex-direction: column; gap: 8px; padding: 10px 12px; background: var(--kagit); border-left: 4px solid var(--pirinc); }
+.rst-sinav .row { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.rst-sinav .ctl-lab { min-width: 1.4em; font-family: var(--f-display); font-size: 1.1rem; color: var(--ink); }
+
+/* QSO */
+.qso-liste { display: flex; flex-direction: column; gap: 8px; overflow: auto; min-height: 0; max-height: 52vh; padding-right: 4px; }
+.qso-satir { padding: 8px 12px 6px; background: var(--kagit); border-radius: 3px; border-left: 4px solid var(--line-2); }
+.qso-satir.qso-B { margin-left: clamp(0px, 4vw, 48px); border-left-color: var(--mavi); }
+.qso-satir.qso-A { margin-right: clamp(0px, 4vw, 48px); border-left-color: var(--pirinc); }
+.qso-satir.calan { box-shadow: 0 0 0 2px var(--pirinc); }
+.qso-bas { display: flex; align-items: center; gap: 8px; font-size: 0.86rem; }
+.qso-bas .spacer { flex: 1; }
+.qso-metin { font-family: var(--f-mono); font-weight: 600; font-size: 0.92rem; letter-spacing: 0.04em; margin: 4px 0 2px; color: var(--ink-2); line-height: 1.7; word-break: break-word; }
+.qso-metin span.usul { text-decoration: overline; }
+.qso-metin span.gecti { color: var(--ink); }
+.qso-metin span.on { background: var(--pirinc); color: #2a1d02; border-radius: 2px; }
+.qso-satir details.more { margin: 2px 0 0; padding-top: 2px; border-top: 0; font-size: 0.9rem; }
+
+/* Çözücü */
+.cz-olcum { gap: 8px 16px; }
+.cz-seviye { position: relative; width: 160px; height: 10px; border-radius: 5px; background: var(--kagit); box-shadow: inset 0 0 0 1px var(--line); overflow: hidden; }
+.cz-seviye i { position: absolute; left: 0; top: 0; bottom: 0; width: 0; background: var(--line-2); transition: width .06s; }
+.cz-seviye.acik i { background: var(--pirinc); }
+.gizlilik { font-size: 0.78rem; color: var(--muted); }
+@media (max-width: 860px) {
+  .qk-izgara, .qso-liste { max-height: none; }
+  .rst-rapor { gap: 18px; }
+}
